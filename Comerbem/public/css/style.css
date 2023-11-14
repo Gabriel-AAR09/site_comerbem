@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+    --bege: #F8ECDC;
+    --verde-principal: #35C574
+    --verde-secundario: #449166;
+    --verde-terceiro: #35C442;
+    --verde-quarto: #154F2E;
+    --verde-quinto: #207846;
+    --vermelho: #E63136;
+    --letra-principal: "Concert One";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: var(--bege);
+    background-image: url(/img/layered-waves-haikei-svg1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*Parte do menu horizontal*/
+
+.cabecalho {
+    text-align: center;
+    padding: .9rem;
+}
+
+.logo {
+    width: 10rem;
+    padding-left: 1.3rem;
+    padding-top: -9rem;
+}
+
+.menu-lista {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.item-lista {
+    font-size: 1.4rem;
+    font-family: var(--letra-principal);
+    margin-top: .9rem;
+}
+
+.item-lista .item-linha {
+    color: var(--verde-quinto);
+    position: relative;
+    text-align: center;
+}
+
+.item-lista .item-linha::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: var(--bege);
+    margin: -0.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+.item-lista .item-linha:hover::after {
+    width: 100%;
+}
+
+.buscar {
+    padding: 5px;
+    margin: 4px;
+    border: none;
+}
+
+.buscar-menu {
+    background: white;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid var(--verde-quarto);
+    text-align: center;
+    font-family: var(--letra-principal);
+    color: var(--verde-quinto);
+    border-radius: 5px;
+}
+
+.buscar {
+    color: var(--verde-terceiro);
+    font-family: var(--letra-principal);
+    font-size: .9rem;
+}
+
+/*parte do menu lateral*/
+
+.hamburger{
+    width: 1rem;
+    height: 1rem;
+    position: fixed;
+    z-index: 5;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: -3rem;
+}
+
+.show-menu .hamburger{
+    right: 16rem;
+}
+
+.line{
+    width: 1.5rem;
+    height: 0.1rem;
+    padding: 0.4px;
+    border-radius: 10px;
+    background-color: var(--verde-quarto);
+    box-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.788);
+    transition: transform .2s;
+}
+
+.show-menu #line1{
+    transform: rotate(45deg) translate(-.3rem, .4rem);
+    background-color: var(--verde-terceiro);
+    box-shadow: none;
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.3rem, -.9rem);
+    background-color: var(--verde-terceiro);
+    box-shadow: none;
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    opacity: 0.8;
+    box-shadow: 10px 5px 15px 10px rgba(0, 0, 0, 0.582);
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all .4s;
+    text-align: center;
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item{
+    text-align: left;
+    padding-bottom: 20px;
+    margin-left: 2px;
+}
+
+.menu-link{
+    font-family: var(--letra-principal);
+    font-size: 1.5rem;
+    color: var(--verde-quarto);
+    transition: color .7s;
+    position: relative;
+    padding-left: 2px;
+}
+
+.menu-link:hover{
+    color: var(--verde-terceiro);
+    transition: color .7s;
+}
+
+.menu-link:after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: var(--verde-terceiro);
+    margin: -0.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.segundo-menu {
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.texto-receitas {
+    padding-top: 3rem;
+    color: var(--vermelho);
+    font-size: 3rem;
+    font-family: var(--letra-principal);
+}
+
+.linha-menu {
+    background: var(--vermelho);
+}
+
+/*primeira seção*/
+
+.primeira-secao {
+    font-family: var(--letra-principal);
+    background: var(--bege);
+    display: flex;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 14rem;
+    padding-left: 6rem;
+}
+
+.texto-citacao {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--vermelho);
+    padding-top: 7rem;
+    width: 20rem;
+    animation: bounce;
+    animation-duration: 2s;
+}
+
+.texto-citacao span {
+    color: var(--verde-terceiro);
+}
+
+.texto-receitas {
+    font-size: 2rem;
+    padding-bottom: -.2rem;
+   padding-top: -.2rem;
+   margin-top: -1.5rem;
+}
+
+.texto-receitas a {
+    color: var(--verde-terceiro);
+    border: 1px solid var(--vermelho);
+    padding: .6rem;
+    border-radius: 10px;
+}
+
+.texto-receitas a:hover {
+    background:var(--verde-quinto);
+    color: var(--bege);
+    border: 1px solid var(--verde-quinto);
+}
+
+.texto-sugestao {
+    padding-top: 1.4rem;
+}
+
+.img-primeiro {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-top: 7rem;
+}
+
+.img-prato {
+    width: 40rem;
+    transition: .7s ease-in-out;
+}
+
+.primeiro-filtro {
+    margin-top: -6rem;
+}
+
+.segunda-secao {
+    background: #2078465e;
+    height: 9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.texto1 {
+    background: #35c44167;
+    border-radius: 4px;
+    height: 6rem;
+    width: 8rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--letra-principal);
+    color: var(--verde-quinto);
+    margin: 1rem;
+    padding: .5rem .3rem .5rem 0rem;
+    opacity: .7;
+}
+
+.texto1:hover {
+    opacity: 1;
+}
+
+.texto2 {
+    background: #35c44167;
+    border-radius: 4px;
+    height: 6rem;
+    width: 8rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--letra-principal);
+    color: var(--verde-quinto);
+    margin: 1rem;
+    padding: .5rem .3rem .5rem 0rem;
+    opacity: .7;
+}
+
+.texto2:hover {
+    opacity: 1;
+}
+
+.texto3 {
+    background: #35c44167;
+    border-radius: 4px;
+    height: 6rem;
+    width: 8rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--letra-principal);
+    color: var(--verde-quinto);
+    margin: 1rem;
+    padding: .5rem .3rem .5rem 0rem;
+    opacity: .7;
+}
+
+.texto3:hover {
+    opacity: 1;
+}
+
+.parte-segunda {
+    background: #2078465e;
+    height: 1.3rem;
+    text-align: center;
+}
+
+.informativo {
+    font-size: 1rem;
+    color: var(--verde-principal);
+    font-family: var(--letra-principal);
+}
+
+/*Parte do alimentos*/
+
+.alimento-titulo {
+    color: rgba(230, 49, 54, 0.37);
+    font-size: 4rem;
+    font-family: var(--letra-principal);
+    text-align: center;
+    cursor: context-menu;
+    animation: backInLeft;
+    animation-duration: 2s;
+}
+
+.alimento-titulo span {
+    color: rgba(53, 197, 116, 0.41);
+}
+
+.img-retangulos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.retangulo-1 {
+    transition: 2s;
+}
+
+.retangulo-1:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+.retangulo-2 {
+    transition: 2s;
+}
+
+.retangulo-2:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+.retangulo-3 {
+    transition: 2s;
+}
+
+.retangulo-3:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+.retangulo-4 {
+    transition: 2s;
+}
+
+.retangulo-4:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+.retangulo-5 {
+    margin-left: 20rem;
+    transition: 2s;
+}
+
+.retangulo-5:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+/* parte dos beneficios dos alimentos */
+
+.quarta-secao {
+    background-image: url(img/layered-waves-haikei-svg1.svg);
+    background-repeat: no-repeat;
+    height: 65rem;
+    background-size: 100%;
+    margin-top: 5rem;
+}
+
+.beneficio-titulo {
+    padding-top: 8rem;
+    color: rgba(230, 49, 54, 0.37);
+    font-size: 4rem;
+    font-family: var(--letra-principal);
+    text-align: center;
+    cursor: context-menu;
+    animation: backInLeft;
+    animation-duration: 2s;
+}
+
+.beneficio-titulo span {
+    color: rgba(53, 197, 116, 0.41);
+}
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+  }
+  
+  .slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .on {
+    opacity: 1;
+  }
+  
+  #prev-button, #next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  #prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  .beneficio-nutri {
+    color: var(--verde-quarto);
+    font-size: 1rem;
+    font-family: var(--letra-principal);
+    text-align: center;
+    margin-top: -4rem;
+  }
+
+  .beneficio-nutri a {
+    color: var(--verde-quinto);
+  }
+
+  .container-beneficio {
+    background: #35C5743B;
+    height: 15rem;
+    width: 50rem;
+    margin-left: 20rem;
+    margin-top: 3rem;
+    border-radius: 10px;
+  }
+
+  .conteudo-beneficio {
+    color: var(--vermelho);
+    font-size: 2rem;
+    font-family: var(--letra-principal);
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .sobre-titulo {
+    background-image: url(img/layered-waves-haikei-svg1.svg);
+    background-repeat: no-repeat;
+    height: 65rem;
+    background-size: 100%;
+    margin-top: 18rem;
+    animation: backInLeft;
+    animation-duration: 2s;
+  }
+
+  .sobre-titulo {
+    padding-top: 10rem;
+    color: rgba(230, 49, 54, 0.37);
+    font-size: 4rem;
+    font-family: var(--letra-principal);
+    text-align: center;
+    cursor: context-menu;
+}
+
+.sobre-titulo span {
+    color: rgba(53, 197, 116, 0.41);
+}
+
+.sobre-titulo a {
+    color: #E631365E;
+}
+
+
+.gallery {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: -50rem;
+}
+
+.gallery img{
+    aspect-ratio: 9/16;
+    min-width: 0;
+    flex: 1 1 10px;
+    object-fit: cover;
+    opacity: .5;
+    transition: .5s;
+}
+
+.gallery img:hover {
+    flex: 1 1 100px;
+    opacity: 1;
+}
+
+.sobre-text {
+    padding: 3rem;
+    color: var(--verde-quarto);
+    font-family: var(--letra-principal);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.rodape {
+    background: #279155BF;
+    height: 10rem;
+    margin-top: 15rem;
+}
+
+.rodape-titulo  {
+    color: #E63136A8;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--letra-principal);
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    padding: 2rem;
+    margin-left: 40%;
+}
+
+.icones p {
+    margin-right: 1rem;
+}

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+    --bege: #F8ECDC;
+    --verde-principal: #35C574
+    --verde-secundario: #449166;
+    --verde-terceiro: #35C442;
+    --verde-quarto: #154F2E;
+    --verde-quinto: #207846;
+    --vermelho: #E63136;
+    --letra-principal: "Concert One";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: var(--bege);
+    background-image: url(/img/layered-waves-haikei-svg1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*Parte do menu horizontal*/
+
+.cabecalho {
+    text-align: center;
+    padding: .9rem;
+}
+
+.logo {
+    width: 10rem;
+    padding-left: 1.3rem;
+    padding-top: -9rem;
+}
+
+.menu-lista {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.item-lista {
+    font-size: 1.4rem;
+    font-family: var(--letra-principal);
+    margin-top: .9rem;
+}
+
+.item-lista .item-linha {
+    color: var(--verde-quinto);
+    position: relative;
+    text-align: center;
+}
+
+.item-lista .item-linha::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: var(--bege);
+    margin: -0.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+.item-lista .item-linha:hover::after {
+    width: 100%;
+}
+
+.buscar {
+    padding: 5px;
+    margin: 4px;
+    border: none;
+}
+
+.buscar-menu {
+    background: white;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid var(--verde-quarto);
+    text-align: center;
+    font-family: var(--letra-principal);
+    color: var(--verde-quinto);
+    border-radius: 5px;
+}
+
+.buscar {
+    color: var(--verde-terceiro);
+    font-family: var(--letra-principal);
+    font-size: .9rem;
+}
+
+/*parte do menu lateral*/
+
+.hamburger{
+    width: 1rem;
+    height: 1rem;
+    position: fixed;
+    z-index: 5;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: -3rem;
+}
+
+.show-menu .hamburger{
+    right: 16rem;
+}
+
+.line{
+    width: 1.5rem;
+    height: 0.1rem;
+    padding: 0.4px;
+    border-radius: 10px;
+    background-color: var(--verde-quarto);
+    box-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.788);
+    transition: transform .2s;
+}
+
+.show-menu #line1{
+    transform: rotate(45deg) translate(-.3rem, .4rem);
+    background-color: var(--verde-terceiro);
+    box-shadow: none;
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.3rem, -.9rem);
+    background-color: var(--verde-terceiro);
+    box-shadow: none;
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    opacity: 0.8;
+    box-shadow: 10px 5px 15px 10px rgba(0, 0, 0, 0.582);
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all .4s;
+    text-align: center;
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item{
+    text-align: left;
+    padding-bottom: 20px;
+    margin-left: 2px;
+}
+
+.menu-link{
+    font-family: var(--letra-principal);
+    font-size: 1.5rem;
+    color: var(--verde-quarto);
+    transition: color .7s;
+    position: relative;
+    padding-left: 2px;
+}
+
+.menu-link:hover{
+    color: var(--verde-terceiro);
+    transition: color .7s;
+}
+
+.menu-link:after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: var(--verde-terceiro);
+    margin: -0.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.segundo-menu {
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.texto-receitas {
+    padding-top: 3rem;
+    color: var(--vermelho);
+    font-size: 3rem;
+    font-family: var(--letra-principal);
+}
+
+.linha-menu {
+    background: var(--vermelho);
+}
+
+.parte1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.caixa {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.caixa img {
+    width: 15rem;
+    height: 15rem;
+    margin-left: 4rem;
+}
+
+
+.icon1 {
+    font-size: 1rem;
+    font-family: var(--letra-principal);
+    color: var(--verde-quarto);
+    margin-right: 13px;
+}
+
+.icon2 {
+    font-size: 1rem;
+    font-family: var(--letra-principal);
+    color: var(--verde-quarto);
+}
+
+.receita-titulo {
+    font-size: 3rem;
+    font-family: var(--letra-principal);
+    color: #E63136A8;
+    text-align: center;
+    margin-top: 3rem;
+    animation: lightSpeedInRight;
+    animation-duration: 2s;
+}
+
+.ingredientes {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+
+.receita-nome {
+    font-size: 1.6rem;
+    font-family: var(--letra-principal);
+    color: var(--verde-terceiro);
+    margin-left: 30px;
+}
+
+.ingredientes p {
+    font-size: 1rem;
+    font-family: var(--letra-principal);
+    color: var(--verde-principal);
+    padding: 1rem;
+}
+
+.modo-preparo {
+    font-family: var(--letra-principal);
+    font-size: 1rem;
+    margin-left: 30px;
+    margin-top: 2rem;
+}
+
+.modo-preparo h4 {
+    color: var(--verde-terceiro);
+    font-size: 1.6rem;
+}
+
+.modo-preparo p {
+    padding: 6px;
+}
+
+.modo-preparo span {
+    font-size: 1.4rem;
+    color: var(--vermelho);
+}
+
+.beneficio-receitas h4{
+    color: var(--verde-quarto);
+    font-family: var(--letra-principal);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.informacao {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.img-tabela {
+    padding: 5rem;
+    margin-left: 20rem;
+}
+
+.rodape {
+    background: #279155BF;
+    height: 10rem;
+    margin-top: 15rem;
+}
+
+.rodape-titulo  {
+    color: #E63136A8;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--letra-principal);
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    padding: 2rem;
+    margin-left: 40%;
+}
+
+.icones p {
+    margin-right: 1rem;
+}
+
+.quadrado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.quadrado img {
+    height: 110px;
+    width: 110px;
+}

@@ -1,0 +1,160 @@
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+<link rel="stylesheet" href="/css/style.css">
+ <!--Parte do menu horizontal, onde tem sobre nós, logo, login...-->
+    <nav class="cabecalho">
+        <header class="menu-horizontal">
+            <ul class="menu-lista">
+                <li class="item-lista">
+                    <a href="./home"><img src="/img/Logo Colorido.png" alt="" class="logo"></a>
+                </li>
+                <li class="item-lista">
+                    <a href="#sobre" class="item-linha">Sobré nós</a>
+                </li>
+                <li class="item-lista">
+                    <div class="buscar-menu">
+                        <input type="search-text" placeholder="Buscar" class="buscar">
+                        <a href="#" class="buscar-botao"><i class="fa-solid fa-magnifying-glass"
+                                style="color: #3ab72a;"></i></a>
+                    </div>
+                </li>
+                <li class="item-lista">
+                    <a href="./login" class="item-linha">Login</a>
+                </li>
+                <li class="item-lista">
+                    <a href="./register" class="item-linha">Cadastro</a>
+                </li>
+                <li class="item-lista">
+                    <a href="./logout" class="item-linha">Sair</a>
+                </li>
+            </ul>
+        </header>
+    </nav>
+    <!--parte do menu lateral, onde tem o link para as receitas-->
+    <div class="container">
+        <div class="hamburger">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+        </div>
+
+        <aside class="sidebar">
+            <nav class="menu-lateral">
+                <hr class="linha-menu">
+                <p class="texto-receitas">Receitas</p>
+                <hr>
+                <ul class="segundo-menu">
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Doces e sobremesas</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Salgado</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Lanches</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Bebidas</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Massas</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Almoço</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Café da manhã</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Sopas e caldos</a></li>
+                    <li class="menu-item"><i class="fa-solid fa-apple-whole" style="color: #ae2819;" class="maca"></i><a
+                            href="#" class="menu-link">Ver todas as receitas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="primeira-secao">
+            <div class="texto">
+                <p class="texto-citacao"><span>“Não coma menos. </span>Coma melhor!”</p>
+                <p class="texto-receitas"><a href="./receitas/">Receitas</a></p>
+                <p class="texto-sugestao">Sugestão de receitas adpatadas para <br> suas necessidades.</p>
+            </div>
+            <div class="img-primeiro">
+                <img src="/img/pngwing 2.png" class="img-prato"
+                    alt="Prato de comida que tem carne com cebola, abacate, abobora, vargem">
+            </div>
+        </section>
+
+        <section class="segunda-secao">
+            <p class="texto1">50% dos brasileiros têm falta de vitamina A</p>
+            <p class="texto2">80% dos brasileiros têm falta de vitamina C</p>
+            <p class="texto3">81% dos brasileiros têm falta de vitamina K</p>
+        </section>
+
+        <div class="parte-segunda">
+            <p class="informativo">Fonte retirada do med.puc-rio.br</p>
+        </div>
+
+        <section class="terceira-secao">
+            <p class="alimento-titulo">Alimentos e suas <br><span>fontes</span></p>
+            <div class="img-retangulos">
+                <img src="/img/ferro.png" alt="" class="retangulo-1">
+                <img src="/img/iodo.png" alt="" class="retangulo-2">
+                <img src="/img/vitamina a.png" alt="" class="retangulo-3">
+                <img src="/img/zinco.png" alt="" class="retangulo-4">
+                <img src="/img/vitamina d.png" alt="" class="retangulo-5">
+                <img src="/img/prato2.png" alt="">
+            </div>
+        </section>
+
+        <section class="quarta-secao">
+            <p class="beneficio-titulo">Benefícios dos <br><span>alimentos</span></p>
+            <div class="container-slider">
+                <button id="prev-button"><img src="/img/circle-chevron-left-solid.svg" alt="prev-button"></button>
+                <div class="container-images">
+                  <img src="/img/post1.jpg" alt="girl" class="slider on">
+                  <img src="/img/post2.jpg" alt="girl" class="slider">
+                  <img src="/img/post3.jpg" alt="girl" class="slider">
+                  <img src="/img/post4.jpg" alt="girl" class="slider">
+                  <img src="/img/post5.jpg" alt="girl" class="slider">
+                </div>
+                <button id="next-button"><img src="/img/circle-chevron-right-solid.svg" alt="next-button"></button>
+              </div>
+            <p class="beneficio-nutri">Conteúdo cedido da nutricionista <a
+                    href="https://instagram.com/camilamartss?igshid=MmVlMjlkMTBhMg==" target="_blank">Dra Camila
+                    Martins</a></p>
+            <div class="container-beneficio">
+                <h3 class="conteudo-beneficio">Veja mais</h3>
+            </div>
+        </section>
+
+        <section class="quinta-secao">
+            <p class="sobre-titulo" id="sobre"><a href="#sobre">Sobre nós <br><span>e o nosso projeto</a></span></p>
+            <div class="gallery">
+                <img src="/img/foto1.jpg" alt="" class="img1">
+                <img src="/img/foto2.jpg" alt="" class="img2">
+                <img src="/img/foto3.jpg" alt="" class="img3">
+                <img src="/img/foto4.jpg" alt="" class="img4">
+                <img src="/img/foto5.jpg" alt="" class="img4">
+                <img src="/img/foto6.jpg" alt="" class="img4">
+                <img src="/img/foto7.jpg" class="img4">
+            </div>
+            <p class="sobre-text">Projeto criado com 6 alunos de ads e um colaborador que é estudante de nutrição da universidade da Uniceplac. 
+                <br>Tivemos a ideia de criar esse site a partir de um projeto da faculdade na qual precisavamos criar algo para o beneficio da
+                <br> comunidade. Pensamos na alimentação da população afim de mostrar formas diferentes de receitas comuns no coditiano de uma 
+                <br>pessoa de forma mais nutritiva atendendo as suas necessidades nutricionais necessárias e faltas, no aproveitamento dos 
+                <br>alimentos que possivelmente são jogados fora.</p>
+        </section>
+
+        <footer class="rodape">
+           <h4 class="rodape-titulo">Entre nas nossas redes sociais</h4>
+           <div class="icones">
+               <p><a href="#"><i class="fa-brands fa-twitter fa-2xl" style="color: #153f03;"></i></a></p>
+               <p><a href="#"><i class="fa-brands fa-linkedin fa-2xl" style="color: #153f03;"></i></a></p>
+               <p><a href="#"><i class="fa-brands fa-github fa-2xl" style="color: #153f03;"></i></a></p>
+               <p><a href="#"><i class="fa-brands fa-instagram fa-2xl" style="color: #153f03;"></i></a></p>
+           </div>
+        </footer>
+
+
+
+
+
+        <script src="https://kit.fontawesome.com/d00c321405.js" crossorigin="anonymous"></script>
+        <script src="/js/home.js"></script>
